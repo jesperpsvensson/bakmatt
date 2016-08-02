@@ -34,7 +34,7 @@
       </div>
       <div class="row marginBottom">
         <div class="col-sm-6 col-sm-offset-3 topSpace">
-          <form>
+          <form id="form">
             <div class="form-group topSpace"> 
               <input type="text" class="form-control textInput center" placeholder="Ange mängd" id="textIn">
             </div>
@@ -92,6 +92,14 @@
         
         $('#modalCloseBtn').click(function() {
           $("#cupcakeIcon").animate({width: "120px"});
+        });
+        
+        $('#form').on('keyup keypress', function(e) {
+          var keyCode = e.keyCode || e.which;
+          if (keyCode === 13) { 
+            e.preventDefault();
+            return false;
+          }
         });
       });
     </script>
