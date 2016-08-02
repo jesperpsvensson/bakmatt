@@ -1,4 +1,8 @@
- function setIDs() {
+function showHelp() {
+  alert("Måste ange ett nummer!");
+} 
+
+function setIDs() {
           var ids = ["ml", "cl", "dl", "l", "krm","tsk", "msk"];
           for (i = 0; i < ids.length; i++) {
             document.getElementById(ids[i]).innerHTML = "0";
@@ -15,8 +19,13 @@
         }
  
 function setResult() {
- 				var text = getSelectedText('enhet');    
+ 	    var text = getSelectedText('enhet');    
         var a = document.getElementById('textIn').value;
+        
+      if (isNaN(a)) {
+          setIDs();
+      } else {
+  
         var inputInt = parseFloat(a);
         
         if (text == "ml") {
@@ -188,6 +197,7 @@ function setResult() {
             var krm = inputInt * 15;
             document.getElementById("krm").innerHTML = krm.toFixed(2);
             
+          }
           }
   			}      
  			}
