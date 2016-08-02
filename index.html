@@ -23,54 +23,57 @@
     
   </head>
   <body>
-   
     <div class="container">
-      
       <img src="cupcake.png" class="img-responsive center" id="cupcakeIcon">
       <h1 class="centerText topSpace">Bakmått</h1>
-      
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3 resultRow ">
-          
           <p class="lead topSpace"><span id="ml">0</span> ml = <span id="cl">0</span> cl = <span id="dl">0</span> dl = <span id="l">0</span> l</p>
-          
           <p class="lead "><span id="krm">0</span> krm = <span id="tsk">0</span> tsk = <span id="msk">0</span> msk</p>
-          
         </div>
       </div>
-      
       <div class="row marginBottom">
         <div class="col-sm-6 col-sm-offset-3 topSpace">
           <form>
             <div class="form-group topSpace"> 
-              
               <input type="text" class="form-control textInput center" placeholder="Ange mängd" id="textIn">
             </div>
-              <div class="form-group">
-                <select class="form-control center" id="enhet">
-                  <option>Välj enhet</option>
-                  <option>ml</option>
-                  <option >cl</option>
-                  <option >dl</option>
-                  <option>l</option>
-                  <option>krm</option>
-                  <option>tsk</option>
-                  <option>msk</option>
-                </select>
-              </div>
-            
+            <div class="form-group">
+              <select class="form-control center" id="enhet" onchange="update();">
+                <option>Välj enhet</option>
+                <option>ml</option>
+                <option >cl</option>
+                <option >dl</option>
+                <option>l</option>
+                <option>krm</option>
+                <option>tsk</option>
+                <option>msk</option>
+              </select>
+            </div>
           </form>
         </div>
-        
-      
       </div>
-      
-      
     </div>
-    
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="modalCloseBtn">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h2 class="modal-title" id="myModalLabel">Om Bakmått</h2>
+          </div>
+          <div class="modal-body">
+            <p>Bakmått är en liten webbplikation, gjord med HTML, CSS, Bootstrap, Javascript samt en liten gnutta Jquery. Med Bakmått kan man enkelt överätta mått och enheter som kan förekomma i köket och framförallt vid bakning.</p>
+            <p>Happy baking!</p>
+            <p>© Jesper Svensson 2016</p>
+          </div> 
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
-        <p class="text-muted topSpace">© Bakmått 2016.</p>
+        <p class="text-muted topSpace">©<a href="#" data-toggle="modal" data-toggle="modal" data-target="#myModal"> Bakmått</a> 2016.</p>
       </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -78,5 +81,19 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="app.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function(){
+        $("#cupcakeIcon").hover(function(){
+          $("#cupcakeIcon").animate({width: "200px"});
+          $("#myModal").modal('show');
+        }, function() {
+           
+        });
+        
+        $('#modalCloseBtn').click(function() {
+          $("#cupcakeIcon").animate({width: "120px"});
+        });
+      });
+    </script>
   </body>
 </html>

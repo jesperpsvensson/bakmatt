@@ -10,6 +10,12 @@ html {
   min-height: 100%;
 }
 
+#omDiv {
+  float: left;
+  position: absolute;
+  top: 30px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

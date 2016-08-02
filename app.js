@@ -1,7 +1,4 @@
- $("#textIn").keyup(function(){
-        
-        
-        function setIDs() {
+ function setIDs() {
           var ids = ["ml", "cl", "dl", "l", "krm","tsk", "msk"];
           for (i = 0; i < ids.length; i++) {
             document.getElementById(ids[i]).innerHTML = "0";
@@ -16,8 +13,9 @@
 
           return elt.options[elt.selectedIndex].text;
         }
-
-        var text = getSelectedText('enhet');    
+ 
+function setResult() {
+ 				var text = getSelectedText('enhet');    
         var a = document.getElementById('textIn').value;
         var inputInt = parseFloat(a);
         
@@ -191,6 +189,13 @@
             document.getElementById("krm").innerHTML = krm.toFixed(2);
             
           }
-        
-        }
-      });
+  			}      
+ 			}
+ 
+$("#textIn").keyup(function(){
+ 	setResult();       
+});
+    
+function update() {
+	setResult();		
+}
