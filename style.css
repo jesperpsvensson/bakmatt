@@ -23,13 +23,13 @@ html {
   /* Set the fixed height of the footer here */
   height: 50px;
   text-align: center;
-  
+
 }
 
 .header {
   font-size: 500%;
-  
-  
+
+
 }
 
 .spacer {
@@ -38,25 +38,25 @@ html {
 }
 
 nav {
-  
+
 }
 
 
 .navbar {
   background: none;
   border: none;
-  
+
 }
 
 .navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
   color: #fff !important;
   background-color: #bb0000 !important;
-  
+
 }
 
 .navbar-brand {
   color: #bb0000;
-  
+
 }
 
 .topSpace {
@@ -75,17 +75,15 @@ nav {
 }
 
 .form-control {
-  
+
   font-size: 1.1em;
   width: 80%;
-  
-  
+
 }
 
 .resultRow {
-  
+
   color: #333333;
-  
   
 }
 
@@ -97,24 +95,38 @@ nav {
 .centerText {
   margin-top: 30px;
   text-align: center;
-  
+
 }
 
 .bottomMargin {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 1.5em;
+@media screen and (max-width: 768px) {
+
+  footer {
+    position: relative;
   }
-  
+
   #cupcakeIcon {
     width: 80px;
     opacity: 0.5;
     margin-top: 40px;
   }
-  
+
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  #cupcakeIcon {
+    width: 80px;
+    opacity: 0.5;
+    margin-top: 40px;
+  }
+
   .footer {
     position: relative;
   }
