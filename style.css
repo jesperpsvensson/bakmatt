@@ -84,7 +84,7 @@ nav {
 .resultRow {
 
   color: #333333;
-  
+
 }
 
 .lead {
@@ -102,17 +102,16 @@ nav {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 768px) {
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
 
-  footer {
-    position: relative;
-  }
-
-  #cupcakeIcon {
-    width: 80px;
-    opacity: 0.5;
-    margin-top: 40px;
-  }
+    footer {
+      position: relative;
+    }
 
 }
 
