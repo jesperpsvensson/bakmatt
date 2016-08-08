@@ -17,7 +17,7 @@ html {
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -35,28 +35,6 @@ html {
 .spacer {
   border-bottom: 2px solid #ffff99;
   width: 10%;
-}
-
-nav {
-
-}
-
-
-.navbar {
-  background: none;
-  border: none;
-
-}
-
-.navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
-  color: #fff !important;
-  background-color: #bb0000 !important;
-
-}
-
-.navbar-brand {
-  color: #bb0000;
-
 }
 
 .topSpace {
@@ -100,19 +78,6 @@ nav {
 
 .bottomMargin {
   margin-bottom: 30px;
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-    footer {
-      position: relative;
-    }
-
 }
 
 @media screen and (max-width: 480px) {
