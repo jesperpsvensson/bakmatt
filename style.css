@@ -4,6 +4,11 @@ body {
   font-family: 'Patrick Hand SC', cursive;s
   margin-bottom: 60px;
   font-size: 2em;
+  background: url(bmbg.jpb) center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 html {
   position: relative;
